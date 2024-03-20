@@ -1,0 +1,23 @@
+<div>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>duration</td>
+            <td>date</td>
+            <td>patient ID</td>
+            <td>patient name</td>
+            <td>patient tel</td>
+            <td>doctorId</td>
+        </tr>
+        <tr *ngFor="let t of treatments">
+            <td>{{t.id}}</td>
+            <td>{{t.duration}}</td>
+            <td>{{t.date}}</td>
+            <td>{{t.patient.idNumber}}</td>
+            <td>{{t.patient.name}}</td>
+            <td>{{t.patient.tel}}</td>
+            <td>{{t.patient.doctorId}}</td>
+            <td><button (click)="updateTreat(t)">ערוך טיפול</button></td>
+        </tr>
+    </table>
+</div>

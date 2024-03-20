@@ -1,0 +1,19 @@
+<div>
+    <table>
+        <tr *ngFor="let p of patients">
+            <td>{{p.id}}</td>
+            <td>{{p.idNumber}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.tel}}</td>
+            <td><button (click)="deletePatient(p.id)">delete patient</button></td>
+        </tr>
+        <tr *ngIf="touched">
+            <td>{{newPatientId}}</td>
+            <td><input type="text" placeholder="מס' זהות מטופל" [(ngModel)]="newPatient.idNumber"name="idNumber" minlength="9" #idNumber1="ngModel"/></td>
+            <td><input type="text" placeholder="שם מטופל" [(ngModel)]="newPatient.name"name="name" minlength="3" #name1="ngModel"/></td>
+            <td><input type="text" placeholder="מס' טלפון מטופל" [(ngModel)]="newPatient.tel"name="tel" minlength="9" maxlength="10" #tel1="ngModel"/></td>
+            <td><button (click)="savePatient()" [disabled]="!touched">שמור מטופל</button></td>
+        </tr>
+    </table>
+    <button (click)="addPatient()">add patient</button>
+</div>

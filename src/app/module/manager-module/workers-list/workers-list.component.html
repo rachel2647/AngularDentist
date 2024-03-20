@@ -1,0 +1,14 @@
+<table>
+    <tr *ngFor="let worker of workers">
+
+        <td>{{worker.id}}</td>
+        <td>{{worker.name}}</td>
+        <td>{{worker.password}}</td>
+        <td>{{worker.role}}</td>
+        <td>
+            <button (click)="showWorker(worker)"> show worker</button>
+        </td>
+        <td><button (click)="deleteWorker(worker.id)">delete worker</button></td>
+    </tr>
+</table>
+<button (click)="addWorker()" class="button">add worker</button>

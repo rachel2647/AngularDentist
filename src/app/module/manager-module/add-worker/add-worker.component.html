@@ -1,0 +1,5 @@
+<input type="text" placeholder="הכנס שם עובד" [(ngModel)]="newWorker.name" name="name" minlength="3" #name1="ngModel"/>
+<p *ngIf="name1.errors">מינימום 3 תווים</p>
+<input type="password" placeholder="הכנס סיסמה" [(ngModel)]="newWorker.password" name="password" #password1="ngModel"/>
+<input type="text" placeholder="הכנס תפקיד" [(ngModel)]="newWorker.role" name="role" #name1="ngModel"/>
+<button (click)="saveNewWorker()">save</button>

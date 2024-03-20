@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <input type="number" placeholder="מס' זהות מטופל" [(ngModel)]="newTreatment.patient.idNumber" name="idNumber"
+            minlength="9" #idNumber1="ngModel" />
+        <input type="text" placeholder="שם מטופל" [(ngModel)]="newTreatment.patient.name" name="name" minlength="3"
+            #name1="ngModel" />
+        <input type="text" placeholder="מס' טלפון מטופל" [(ngModel)]="newTreatment.patient.tel" name="tel" minlength="9"
+            maxlength="10" #tel1="ngModel" />
+        <input type="number" placeholder="משך הטיפול" [(ngModel)]="newTreatment.duration " name="duration"
+            #duration1="ngModel" />
+        <input type="date" placeholder="תאריך הטיפול" [(ngModel)]="newTreatment.date" name="date" minlength="3"
+            #date1="ngModel" />
+    </div>
+    <button (click)="saveTreat()">שמור טיפול</button>
+</div>

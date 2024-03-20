@@ -1,0 +1,6 @@
+
+<input type="text" placeholder="הכנס שם משתמש" [(ngModel)]="name" name="name" minlength="3" #name1="ngModel"/>
+<p *ngIf="name1.errors">מינימום 3 תווים</p>
+<input type="password" placeholder="הכנס סיסמה" [(ngModel)]="password" name="password" #password1="ngModel"/>
+<button (click)="checkPermission()">login</button>
+<p *ngIf="this.errorLogin">שם משתמש/סיסמה שגוי</p>
